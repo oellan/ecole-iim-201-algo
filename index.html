@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Jeu de nim</title>
+    </head>
+    <body>
+        <div id="app"></div>
+        <pre><code id="app-log"></code></pre>
+        <script type="module">
+            'use strict';
+            import NimGame from './nim.js';
+
+            try {
+                new NimGame({appElementId: 'app'});
+            } catch (e) {
+                if (e instanceof Error) alert(e.message);
+                else alert(e);
+            }
+        </script>
+    </body>
+</html>
